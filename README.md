@@ -1,5 +1,4 @@
 ﻿# AquaFlora-ChatBot
-﻿# AquaFlora-ChatBot
 
 # Chatbot WhatsApp - Projeto
 
@@ -44,6 +43,10 @@ npm install
 ```bash
 node wpbot.js
 ```
+Ou
+```
+Inicie o bot com o caminho personalizado no .bat
+```
 
 4. Ao rodar, será gerado um QR Code no terminal. Escaneie-o com o app do WhatsApp no celular para autenticar.
 
@@ -71,4 +74,5 @@ node wpbot.js
 Este projeto é open source e pode ser usado livremente.
 
 ---
+
 

@@ -1,8 +1,5 @@
 ﻿# AquaFlora-ChatBot
-
-Claro! Vou criar um README básico e direto, com o que um projeto de chatbot para WhatsApp usando `whatsapp-web.js` e QR Code normalmente precisa. Se quiser, posso ajustar depois.
-
----
+﻿# AquaFlora-ChatBot
 
 # Chatbot WhatsApp - Projeto
 
@@ -74,3 +71,4 @@ node wpbot.js
 Este projeto é open source e pode ser usado livremente.
 
 ---
+

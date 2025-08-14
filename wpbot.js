@@ -31,67 +31,73 @@ client.on('message', async (msg) => {
         saudacaoEnviada[msg.from] = true;
         
         await chat.sendStateTyping();
-        await delay(5000);
-        await client.sendMessage(msg.from, '👋 Olá! Seja bem-vindo(a) à nossa loja! \n Como podemos te ajudar hoje?  \n\n1️⃣- Pedidos\n2️⃣- Farmácia\n3️⃣- Pesca\n4️⃣- Ração\n5️⃣- Pet\n6️⃣- Ferramentas');
+        await delay(2500);
+        await client.sendMessage(msg.from, '👋 Olá! Seja bem-vindo(a) à nossa loja! \n Digite o número do setor que deseja ajuda:  \n\n1️⃣- Pedidos\n2️⃣- Farmácia\n3️⃣- Pesca\n4️⃣- Ração\n5️⃣- Pet\n6️⃣- Ferramentas \n \n Digite Menu para ver o menu novamente.');
 
     }
 
 
-    if (msg.body !== null && msg.body === '1'|| msg.body === 'pedido'|| msg.body === 'comprar'|| msg.body === 'fazer pedido'|| msg.body === 'encomendar'|| msg.body === 'quero comprar'|| msg.body === 'compra'|| msg.body === 'quero pedir'|| msg.body === 'novo pedido' && msg.from.endsWith('@c.us')) {
+    if (msg.body !== null && msg.body === '1' && msg.from.endsWith('@c.us')) {
         const chat = await msg.getChat();
         
         await chat.sendStateTyping();
-        await delay(5000);
+        await delay(2500);
         await client.sendMessage(msg.from, 'Certo! Vamos encaminhar sua solicitação para nosso setor de pedidos. 📝');
 
     }
 
-    if (msg.body !== null && msg.body === '2'|| msg.body === 'Farmácia'|| msg.body === 'remédio'|| msg.body === 'medicamento'|| msg.body === 'medicamentos' && msg.from.endsWith('@c.us')) {
+    if (msg.body !== null && msg.body === '2' && msg.from.endsWith('@c.us')) {
         const chat = await msg.getChat();
         
         await chat.sendStateTyping();
-        await delay(5000);
+        await delay(2500);
         await client.sendMessage(msg.from, 'Ok! Vamos passar seu contato para o setor de farmácia. 💊');
 
     }
 
-    if (msg.body !== null && msg.body === '3'|| msg.body === 'pesca'|| msg.body === 'anzol'|| msg.body === 'vara de pesca'|| msg.body === 'isca' && msg.from.endsWith('@c.us')) {
+    if (msg.body !== null && msg.body === '3' && msg.from.endsWith('@c.us')) {
         const chat = await msg.getChat();
         
         await chat.sendStateTyping();
-        await delay(5000);
+        await delay(2500);
         await client.sendMessage(msg.from, 'Beleza! Vamos encaminhar você para o setor de pesca. 🎣');
 
     }
 
 
-    if (msg.body !== null && msg.body === '4'|| msg.body === 'ração'|| msg.body === 'ração gato'|| msg.body === 'comida para cachorro'|| msg.body === 'ração' && msg.from.endsWith('@c.us')) {
+    if (msg.body !== null && msg.body === '4' && msg.from.endsWith('@c.us')) {
         const chat = await msg.getChat();
         
         await chat.sendStateTyping();
-        await delay(5000);
+        await delay(2500);
         await client.sendMessage(msg.from, 'Entendido! Vamos passar para o setor de rações. 🐾');
 
     }
 
-    if (msg.body !== null && msg.body === '5'|| msg.body === 'pet'|| msg.body === 'acessórios'|| msg.body === 'coleira'|| msg.body === 'caminha pet' && msg.from.endsWith('@c.us')) {
+    if (msg.body !== null && msg.body === '5' && msg.from.endsWith('@c.us')) {
         const chat = await msg.getChat();
         
         await chat.sendStateTyping();
-        await delay(5000);
+        await delay(2500);
         await client.sendMessage(msg.from, 'Certo! Vamos encaminhar você para o setor de produtos pet. 🐶🐱');
 
     }
 
-
-    if (msg.body !== null && msg.body === 'AJUDA'|| msg.body === 'Ajuda' && msg.from.endsWith('@c.us')) {
+    if (msg.body !== null && msg.body === '6' && msg.from.endsWith('@c.us')) {
         const chat = await msg.getChat();
         
         await chat.sendStateTyping();
-        await delay(5000);
-        await client.sendMessage(msg.from, 'Aguarde que vamos te transferir para um de nossos atendentes.');
+        await delay(2500);
+        await client.sendMessage(msg.from, 'Certo! Vamos encaminhar você para o setor de ferramentas. 🧰');
 
     }
+
+
+    if (msg.body !== null && (msg.body === "menu" || msg.body === "Menu") && msg.from.endsWith('@c.us')) {
+        await msg.reply("📋 Aqui está o menu novamente:\n\n1️⃣- Pedidos\n2️⃣- Farmácia\n3️⃣- Pesca\n4️⃣- Ração\n5️⃣- Pet\n6️⃣- Ferramentas");
+        return;
+    }
+
 
 
 

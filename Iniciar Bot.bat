@@ -1,4 +1,4 @@
 @echo off
-cd /d "C:\Users\pedro\OneDrive\Área de Trabalho\ChatBot Aquaflora"
-node qualquerm.js
+echo Iniciando bot do WhatsApp...
+node wpbot.js
 pause
